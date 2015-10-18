@@ -32,7 +32,7 @@ class AzureStorage(Storage):
     @property
     def connection(self):
         if self._connection is None:
-            self._connection = azure.storage.BlobService(
+            self._connection = azure.storage.blob.BlobService(
                 self.account_name, self.account_key)
         return self._connection
 
